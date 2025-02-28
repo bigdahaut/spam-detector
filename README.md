@@ -3,27 +3,42 @@
 Ce projet permet de classifier un message en **spam** ou **non-spam** grâce à un modèle entraîné en **Python** avec `scikit-learn`.  
 
 ## 📂 Organisation du projet  
-- **SMSSpamCollection** : Dataset des messages utilisés pour entraîner le modèle.  
-- **import.py** : Chargement et préparation des données.  
-- **converter.py** : Transformation des données textuelles en données exploitables par le modèle.  
-- **trainer.py** : Entraînement du modèle de classification.  
-- **test.py** : Test du modèle sur de nouveaux messages.  
+- **SMSSpamCollection** : Dataset des messages utilisés pour entraîner le modèle. 
+Source: https://archive.ics.uci.edu/dataset/228/sms+spam+collection 
+- **spam_detector.ipynb** : fichier notebook
 
 ## 🚀 Installation et Exécution  
 
 ### 1️⃣ Prérequis  
-Assurez-vous d'avoir **Python 3.x** installé ainsi que les bibliothèques nécessaires :  
-`pip install pandas scikit-learn`
+Utilisation d'un notebook en local (ex: JupyterLab) ou à distance (ex:Google Colab)
+Assurez-vous d'avoir **Python 3.x** 
+- Créeer un environnement virtuel (à l'intérieur de votre projet)
 
-### 2️⃣ Exécuter l'entraînement
-Lancez le script d'entraînement du modèle :
-`python trainer.py`
+!python -m venv env 
+// ou préciser la version de python. ex: !python3.12 -m venv env
 
-### 3️⃣ Tester un message
-Après l'entraînement, allez écrire le message que vous voulez dans le fichier *test.py* et executez :
-`python test.py`
+- Activer l'environnement
+. Sous mac, linux:
+    !source env/bin/activate
+    ou,
+    !env/bin/python -c "import sys; print(sys.executable)"
+. Sous windows:
+    !env/Scripts/activate.bat
+     //Avec CMD
+   !env/Scripts/Activate.ps1
+    //Avec Powershel
 
-Vous verrez s'il est détecté comme spam ou non.
+- Installé les bibliothèques nécessaires :  
+
+    !pip install pandas numpy matplotlib scikit-learn
+
+- Vérifier la liste des packages installés:
+
+    !pip list
+
+(voir le fichier final spam_detector.ipynb)
+
+NB: Toutes ces commandes sont executées dans le notebook.
 
 ## 📜 Licence
 Ce projet est sous licence MIT – vous pouvez l'utiliser librement. Voir le fichier **LICENSE** pour plus d’informations.
